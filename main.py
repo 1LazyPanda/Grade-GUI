@@ -1,25 +1,30 @@
 from logic import *
 
 
-def main():
+def main() -> None:
     """
-    This function initializes the application and displays the main window.
+    Initializes the application and displays the main window.
 
-    It creates a QApplication object and a Logic object. The Logic object
-    represents the main window of the application. Finally, it shows the main
-    window and starts the application event loop.
+    This function creates a QApplication object, a Logic object
+    which represents the main window, and starts the application event loop.
+
+    Args:
+        None
+
+    Returns:
+        None
     """
     # Create a QApplication object
-    application = QApplication([])
+    application: QApplication = QApplication([])  # Create a QApplication object
 
     # Create a Logic object which represents the main window
-    window = Logic()
+    window: Logic = Logic()  # Create a Logic object
 
     # Show the main window
-    window.show()
+    window.show()  # Show the main window
 
     # Start the application event loop
-    application.exec()
+    application.exec()  # Start the application event loop
 
 if __name__ == "__main__":
     main()
